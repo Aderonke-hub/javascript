@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+         //Functions--are block code that performs a particular task
+    //funtions name should verb
+    //invoking funtion
+
+    let user = {
+        name: "Ben",
+        age: 12,
+        city: "Ibadan"
+    };
+
+    function getUserDetail() {
+        console.log(user.name);
+        
+    };
+    getUserDetail()  //invoking function
+
+    //local scope and global scope
+    //local scope  variable are declared inside a function block and cannot be reused outside that function block
+    //global scope variable are declared outside a funtion block and  can be reused in any part of your code
+
+
+    let num1 = 10; //global scope
+
+    function getSum() {
+        let num2 = 20; //local scope
+
+        let sumE1 =  num1 +num2;
+        console.log(sumE1);
+        
+    };
+
+    console.log(num1);
+    getSum()
+
+    //Converdion of string to number
+
+    let num = '5';
+    let newNum = Number(num)
+    console.log(newNum);
+
+    let myNum = '5.789';
+    let newMyNum = parseFloat(myNum);
+    console.log(newNum);
+
+    let myNewNum = '5.90';
+    let newDigit = parseInt(myNewNum);
+    console.log(newDigit);
+
+    let digit = '6';
+    console.log(+digit);
+
+
+    //Conversion of number to string
+
+    let value = 10.90;
+    let newValue = value.toExponential();  //tostring(); tofixed(); toprecision()
+    console.log(newValue);
+
+    let myNewValue = 20;
+    let valueNew = String(myNewValue);
+    console.log(valueNew);
+
+    //getting a date
+
+    let date = new Date();
+    console.log(date.toDateString());
+
+    //argument and parameter
+    //argument are real values received by the function from the outside
+    //parameters are variables that u list as part of definition
+
+    function findSum(num1,num2) {
+        let sum = num1 + num2
+        console.log(sum);
+        
+    };
+    findSum(10,20);
+
+    function sumE1(x,y = 10){
+        console.log(x+y);
+        
+    }
+    sumE1(5)
+    
+
+    //Assignment/classwork
+    //Write a function called greet() that accepts a parameter and logs a greeting message to the console.
+    //Call the function with at list three different name as arguments.
+
+    function greet (name) {
+        console.log(`hello ${name}`);
+    
+    };
+    greet('World');
+    greet('Ben');
+    greet('Ade');
+     
+    //Assignment
+
+    //Write a function divide() that takes two parameters and  consolelog their quotient.
+    //If only one argument is passed,the funtion should return that number
+
+   
+    
+
+    // let div = 10/2;
+    //  console.log(div);
+
+
+
+     function divide(num4, num5=4){
+        let quotient=ParseInt(num4/num5);
+        console.log(quotient);
+        
+        
+     };
+     divide(8)
+
+        
+    </script>
+</body>
+</html>

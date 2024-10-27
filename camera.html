@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="cameraStream" width="640" height="480" autoplay></video>
+
+    <script>
+
+        const enableCamera = async () => {
+            try{
+                let video =document.getElementById( 'cameraStream');
+
+                let steam = await navigator.mediaDevices.getUserMedia({ video: true})
+
+                video.scrObject = stream
+            } catch (error){
+                console.log('Error Acessing Camera' , error);
+                
+            }
+        };
+
+        window.onload =enableCamera;
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="something">
+    <button onclick="doAnything()">Click me</button>
+</body>
+<script>
+    //Arrow function
+
+    // let value = 1;
+    // const doAnything= (() =>{
+    //     value = 2;
+    //     console.log(value);
+        
+    // });
+    // console.log(value);
+
+    // function doAnything(){
+    //     if(something.value.trim() === ""){
+    //         alert("Enter something");
+    //         console.log(doAnything);
+    //     }else {
+    //         alert("nothing")
+    //     }
+    // }
+    // () => {};
+    const doAnything =() => {
+        if(something.value.trim() === ''){
+            alert('Enter something');
+            console.log(doAnything);
+            
+        }else{
+            alert('nothing')
+        }
+    };
+
+    let arr = [1,2,3,4,5,[],{name:'Dami', age: 196},[]];
+
+    let myArr = [];
+    console.log(myArr);
+
+    let jsStudentDetails = {
+        name: "Satoshi",
+        age: 29,
+    } 
+
+    
+    let User ={
+        name: "Baptist"
+    }
+    myArr.push(jsStudentDetails, User);
+    console.log(myArr);
+    console.log(myArr[0]);
+
+    console.log(arr);
+    console.log(arr[0]);
+    console.log(arr[6].name);
+
+    let prop = 'age';
+    console.log(prop);
+
+    console.log(arr[6][prop]);
+    console.log(arr[7]);
+    
+    
+    
+    //lenght
+    console.log(arr.lenght);
+    
+
+    //for each-- loops through an array
+
+    const emoji = ['😊','😍','😒'];
+
+    emoji.forEach((emojis)=>{
+        console.log(`I love ${emojis}`);
+        
+    })
+    //tostring()---convert to string
+
+    console.log(arr.toString());
+    
+    //join()--convert to string with seperator
+
+    console.log(arr.join('-'));
+    
+    //pop()---remove from the end
+
+    let newArr = ['Dami', 'Tunji', 'John']
+    console.log(newArr);
+    
+    //push()--add to the end
+    (newArr.push('Adam'));
+    console.log(newArr);
+    
+
+    //shift()-- remove from the front
+
+    console.log(newArr.shift());
+    console.log(newArr);
+    
+    
+    //unshift()-- add to the front
+
+    console.log(newArr.unshift('Dami'));
+    console.log(newArr);
+    
+    //slice()--non imutable method
+    let numbers = [1,2,3,4,5]
+
+    let num = numbers.slice(0, -2);
+
+    console.log(numbers);
+    console.log(num);
+    
+    
+    
+    //splice()--mutable method
+
+    let deleted = numbers.splice(1,3,'a','b', 'c');
+
+    console.log(deleted);
+    console.log(numbers);
+    
+
+    //find()---find item by predicate
+
+    const colors = ['yellow', 'red', 'blue', 'indigo', 'green', 'black'];
+    const rndColor = colors.find(color =>{
+        return color =='black'
+    });
+    console.log(rndColor);
+    
+
+    //.concat()--create a new array by merging two or more arrays
+   const fruits =['mango', 'apple', 'orange', 'pawpaw', 'watermelon'];
+   const vegetables = ['lectuce', 'carrot', 'spinach', 'okra'];
+
+   const result = fruits.concat(vegetables);
+   console.log(result);
+   
+
+    //.filter()---create a new array by filtering 
+    const words = ['money', 'job', 'sleep', 'javascript', 'cold', 'eat', 'golang', 'python'];
+    const wordResult = words.filter((word) => word.lenght >= 6);
+    console.log(wordResult);
+    
+</script> 
+</html>

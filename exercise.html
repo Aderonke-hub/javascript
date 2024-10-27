@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise</title>
+    <style>
+        h3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .P{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            background-color: rgb(15, 244, 15);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Guessed The number </h3>
+    <p class="P">We have selected a random number betwwen 1-10. See if you can guess the number</p>
+    <div>
+    <p>Enter a guess:</p>
+        <input type="number" id="random">
+        <button onclick="guess()">Submit guess</button>
+    </div>
+</body>
+ <script>
+   
+
+//     let secretNumber = 5;
+//     let attempts = 0;
+//     let maxAttempts = 5;
+    
+// //      function guess(){
+// //          return Math.floor(Math.random() * 10) +1;
+// //          secretNumber = random();
+// //          attempts = 0;
+// //          console.log("Secret number is: " + secretNumber);
+         
+        
+// //    }
+//     function guess(){
+//         let random = parseInt(document.getElementById('random').value);
+//         attempts ++;
+
+//         if(random === 5){
+//             alert("Congratulations! you guessed the number correctly ")
+//             console.log(secretNumber);
+//         }else if(attempts >= maxAttempts){
+//             alert("sorry you have used all your attempts")
+//         }else{
+//             alert(` you have ${maxAttempts -attempts} attempt left`);
+//         }
+//         document.getElementById('random').value = '';
+
+//     }
+ </script>
+</html>

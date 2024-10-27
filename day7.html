@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toggle()">click</button>         
+    <br><br>
+    <button onclick="toggle2()">Arg</button>
+    <br><br>
+    <button onclick="toggle3()">No arg</button>
+
+    <button onclick="operators('+')">+</button>
+    <button onclick="operators('-')">-</button>
+    <button onclick="operators('*')">*</button>
+    <button onclick="operators('/')">/</button>
+
+    <input type="number"  id="input1">
+    <input type="number"  id="input">
+
+    <p id="display"></p>
+</body>
+<script>
+    let oper;
+    let canClear = false
+
+function operators(message){
+    console.log(message);
+
+    let num = Number(document.getElementById('input1').value)
+    let num2 = Number(document.getElementById('input2').value)
+    let display = document.getElementById('display')
+    console.log(display);
+
+    console.log(num, num2);
+
+    oper = message;
+
+    if(oper === '+') {
+        let result = num + num2;
+        display.innerHTML = result;
+    }
+    else if(oper === '-'){
+        result = num - num2;
+        display.innerHTML = result
+    }
+}
+</script>
+</html>

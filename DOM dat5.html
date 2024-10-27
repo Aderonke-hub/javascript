@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div>
+        <p id="greet">Hello</p>
+        <button onclick="greeting()">Submit</button>
+    </div>
+     <div>
+        <input type="text" id="username" />
+        <button onclick="">click</button>
+    </div> <br>
+
+    <div>
+    <input type="number" id="input1"/>
+    <input type="number"  id="input2"/>
+    <button onclick="addSum()">add</button>
+    <p id="result"></p>
+   </div>
+
+
+
+     <div>
+    <input oninput="add()" type="text" id="inp4">
+    <p id="subtract"></p>
+    
+   </div>
+</body> 
+<script>
+    // DOM--Document Object Model
+    //it is a programming interface for web document. It represents the page so that programs can change the document structure,
+    //style and content.
+    // it allows us to create, change or remove elements from the documents
+
+    //Event-- Events are things that happen in the system you are  programming, which the system tells you about 
+    //so your code can react to them.
+
+    //Return statement stops the execution of a function and returns a value.i.e when a return statement is encountered within a funtion,
+    // the function will immediately stop executing
+
+    function random(max){
+        return Math.floor(Math.random() * max);
+    }
+
+    function greeting(){
+        let greetMe = document.getElementById("greet")
+        console.log(greetMe);
+        
+        greetMe.textContent = "Welcome to javascript class";
+
+        let rndCol = `rgb(${random(255)},${random(255)},${random(255)})`;
+        console.log(rndCol);
+
+        //let myColor = 'black'
+        document.body.style.backgroundColor = rndcol;
+        
+    }
+
+    function getUserName() {
+        let userInp = document.getElementById("username").value;
+        console.log(userInp);
+        let answer 
+        
+    }
+
+    function addSum() {
+        let inp1= parseFloat(document.getElementById("input1").value);
+        let inp2 = Number(document.getElementById("input2").value);
+        console.log(inp1, inp2);
+
+        let resultValue = inp1 + inp2;
+        console.log(resultValue);
+        
+        
+        let answer = document.getElementById("result");
+        console.log(answer);
+
+
+        answer.innerHTML += `answer: ${resultValue} <br>`;
+
+         document.getElementById("input1").value = "";
+         document.getElementById("input2").value = "";
+        
+             
+   };
+        //  function addSum() {
+        //     let inp1 = document.getElementById('input1').value;
+        //     let inp2 = document.getElementById('input2').value;
+
+        //     let result = Number(inp1) + Number(inp2);
+
+        //     console.log(result);
+
+        //     let answer = document.getElementById('result');
+
+        //     answer.textContent += `answer: ${result} <br>`;
+
+        //     document.getElementById('input1').value = '';
+        //     document.getElementById('input2').value = '';
+            
+
+        //  }
+
+        function add() {
+        let black = document.getElementById('inp4').value;
+        document.getElementById('subtract').innerHTML = black;
+        }
+
+
+     
+</script>
+</html>

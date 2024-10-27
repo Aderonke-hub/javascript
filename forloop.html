@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer>
+        <h1>For Loop</h1>
+    </footer>
+</body>
+<script>
+    //For loop are used to perform a particular task repeatedly based on the condition set
+    //In for loop 3 parameters are passed
+    //for (Initialization, condition, update)...Update can be an increment or decrement based on the task to be perform
+
+    // for(let i = 1; i <= 10; i++){
+    //     console.log(1);
+        
+    // };
+    for(let i =10; i >=1; i--){
+        console.log(i);
+        
+    };
+
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+
+    for(let i = 0; i <= arr.length; i++){
+        console.log(arr[i]);
+        
+    };
+
+    for(let i = 1; i <= 13; i++){
+        console.log(`2 x ${i} = ${2 * i}`);
+        
+    };
+    //Nested loop-- the nested loop follows the iteration set by the first for loop
+
+    for(let index = 1; index <= 5; index++){
+        for(let i = 1; i <= 10; i++){
+            console.log(`index = ${index}, i = ${i}`);
+            
+        }
+    };
+
+    //For of  --loops through arrays, string and so on(anything that is iterable)
+
+    let str = "Bolaji's car";
+    console.log(str);
+
+    for(const value of str){
+        console.log(value);
+    }
+    
+    //For in--- loops through object properties
+
+    let user = {
+        name: 'Fred',
+        age: 10,
+        city: 'igbo irumole estate'
+    };
+    
+    console.log(user);
+
+    console.log(user.name);
+    
+    
+    //Data destructuring
+
+    const {name, age, city} = user;
+    console.log(name);
+
+
+
+    for(const key in  user){
+        console.log(`${key}: ${user[key]}`);
+        
+    }
+    
+</script>
+</html>

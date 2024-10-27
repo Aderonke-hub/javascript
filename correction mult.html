@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: burlywood;
+        }
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        button{
+            padding: 9px 25px;
+            border-radius: 5px;
+            color: white;
+            background: blue;
+            border: none;
+        }
+        #displayTables{
+            display: flex;
+            gap: 2em;
+            flex-wrap: wrap;
+            width: 100%;
+            border: thin solid red;
+        }
+        input{
+            height: 30px;
+        }
+        div{
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+    <p>Generate Multiplication Table</p>
+    <span>From:</span> <input type="number"  id="input1"> <span>to</span> <input type="number" id="input2">
+    <button onclick="generateTable()">Generate</button> <br><br>
+    <div id="displayTables"></div>
+    <script>
+    function generateTable(){
+        let inp1 = Number(document.getElementById('input1').value);
+        let inp2 = Number(document.getElementById('input2').value);
+        let displayTables = document.getElementById("displayTables")
+        console.log(displayTables);
+        
+
+        if(input1.value.lenght == 1 && input2.value.lenght ==2){
+            displayTables.innerHTML = ''
+            for(let index = inp1; index <= inp2; index++){
+                let span = document.createElement('span');
+                console.log(span);
+
+                for(let i = 1; i < 13; i++){
+                    span.innerHTML += `${1} = ${index *i} <br>`
+                    displayTables.appendChild(span)
+                };
+                
+            }
+        }else if(input1.value < input2.value){
+            alert('error');
+        }
+    }
+</script>
+</html>

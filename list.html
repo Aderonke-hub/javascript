@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 250px;
+}
+
+.container {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 500px;
+   padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    right: 0;
+    margin-right: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button{
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.divv{
+  padding: 10px;
+  margin-top: 5px;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.Div{
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> add list:</h1>
+        <div class="input-section">
+            <input type="text" id="input1" placeholder="Enter a new task">
+            <button onclick="add()">Add Task</button>
+        </div>
+        <ul id="tasklist"> </ul>
+    </div>
+</body>
+<script>
+let arr = [];
+let input1 = document.getElementById('input1');
+let taskList = document.getElementById('tasklist');
+
+function add() {
+    if (input1.value.trim() !== '') {
+        arr.push(input1.value);
+        renderTasks();
+        input1.value = "";
+    }
+}
+
+function del(index) {
+    arr.splice(index, 1);
+    renderTasks();
+}
+
+function renderTasks() {
+    taskList.innerHTML = "";
+    for (let index = 0; index < arr.length; index++) {
+        taskList.innerHTML += `
+            <div class="task">
+                <span>${index + 1}. ${arr[index]}
+                <button onclick="del(${index})">DELETE</button>
+            </div>`;
+    }
+}
+</script>
+</html>

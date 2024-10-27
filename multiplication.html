@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            background-color: rgb(214, 127, 13) ;
+        }
+        div{
+            display: flex;
+            height: 40px;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        } */
+        /* body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: rgb(214, 127, 13) ;
+    }
+    div{
+            display: flex;
+            height: 40px;
+        }
+    input[type="number"] {
+        width: 60px;
+        margin: 0 10px;
+    }
+    button {
+        margin-left: 10px;
+        padding: 5px 10px;
+    }
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 5px 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    } */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: rgb(214, 127, 13)
+    }
+     .mult{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 200px;
+
+        } 
+        div{
+            display: flex;
+        }
+    input[type="number"] {
+        width: 200px;
+        margin: 0 10px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        height: 30px;
+        background-color: blue;
+    }
+     #tableContainer {
+        margin-top: 20px;
+        line-height: 1.5;
+        color: black;
+        width: 1400px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    } 
+    </style>
+</head>
+<body>
+    <section>
+        <h3>Multiplication Table Generator</h3>
+        <p>Generate a multiplication table</p>
+        <div class="mult">
+            <div>
+            <label>From:</label>
+            <input type="number"id="input1">
+            <label>to</label>
+            <input type="number" id="input2">
+            <button onclick="generateBtn()">Generate</button>
+       </div>
+       <!-- <span>From:</span><input type="number" " id="input1"> -->
+        </div>
+         <div id="tableContainer"></div> 
+    </section>
+</body>
+<script>
+  function generateBtn() {
+    // const from = parseInt(document.getElementById('multiplication1').value);
+    // const to = parseInt(document.getElementById('multiplication2').value);
+    // const tableContainer = document.getElementById('tableContainer');
+    
+    let inp1 = Number(document.getElementById('input1').value);
+    let inp2 = Number(document.getElementById('input2').value);
+    let tableContainer =
+    if (isNaN(from) || isNaN(to)) {
+        alert('Please enter valid numbers');
+        return;
+    }
+
+    let output = '';
+    
+    for (let i = from; i <= to; i++) {
+        for (let j = 1; j <= 12; j++) {
+             output +=( `<div>${i} x ${j} = ${i * j} </div>`) ;
+             tableContainer.appendChild('div')
+
+            
+        }
+         output += '<vr>'; 
+    }
+
+    tableContainer.innerHTML = output;
+}
+
+    </script>
+    
+    
+</html>
